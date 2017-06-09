@@ -13,6 +13,10 @@
 		22B531061EEAFE0500C3E3D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B531051EEAFE0400C3E3D1 /* Assets.xcassets */; };
 		22B531091EEAFE0500C3E3D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B531071EEAFE0500C3E3D1 /* LaunchScreen.storyboard */; };
 		22B5310C1EEAFE0500C3E3D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B5310B1EEAFE0500C3E3D1 /* main.m */; };
+		22B531141EEAFEB200C3E3D1 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B531131EEAFEB200C3E3D1 /* CircleView.m */; };
+		22B531171EEB051800C3E3D1 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B531161EEB051800C3E3D1 /* StarView.m */; };
+		22B5311A1EEB06D800C3E3D1 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B531191EEB06D800C3E3D1 /* Shape.m */; };
+		22B5311D1EEB0C1500C3E3D1 /* TextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B5311C1EEB0C1500C3E3D1 /* TextInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		22B531081EEAFE0500C3E3D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22B5310A1EEAFE0500C3E3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B5310B1EEAFE0500C3E3D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22B531121EEAFEB200C3E3D1 /* CircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		22B531131EEAFEB200C3E3D1 /* CircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		22B531151EEB051800C3E3D1 /* StarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		22B531161EEB051800C3E3D1 /* StarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		22B531181EEB06D800C3E3D1 /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		22B531191EEB06D800C3E3D1 /* Shape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
+		22B5311B1EEB0C1500C3E3D1 /* TextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextInputViewController.h; sourceTree = "<group>"; };
+		22B5311C1EEB0C1500C3E3D1 /* TextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,16 @@
 			children = (
 				22B530FC1EEAFE0400C3E3D1 /* AppDelegate.h */,
 				22B530FD1EEAFE0400C3E3D1 /* AppDelegate.m */,
+				22B5311B1EEB0C1500C3E3D1 /* TextInputViewController.h */,
+				22B5311C1EEB0C1500C3E3D1 /* TextInputViewController.m */,
 				22B530FF1EEAFE0400C3E3D1 /* ViewController.h */,
 				22B531001EEAFE0400C3E3D1 /* ViewController.m */,
+				22B531121EEAFEB200C3E3D1 /* CircleView.h */,
+				22B531131EEAFEB200C3E3D1 /* CircleView.m */,
+				22B531151EEB051800C3E3D1 /* StarView.h */,
+				22B531161EEB051800C3E3D1 /* StarView.m */,
+				22B531181EEB06D800C3E3D1 /* Shape.h */,
+				22B531191EEB06D800C3E3D1 /* Shape.m */,
 				22B531021EEAFE0400C3E3D1 /* Main.storyboard */,
 				22B531051EEAFE0400C3E3D1 /* Assets.xcassets */,
 				22B531071EEAFE0500C3E3D1 /* LaunchScreen.storyboard */,
@@ -141,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B531141EEAFEB200C3E3D1 /* CircleView.m in Sources */,
 				22B531011EEAFE0400C3E3D1 /* ViewController.m in Sources */,
 				22B5310C1EEAFE0500C3E3D1 /* main.m in Sources */,
+				22B5311A1EEB06D800C3E3D1 /* Shape.m in Sources */,
+				22B531171EEB051800C3E3D1 /* StarView.m in Sources */,
 				22B530FE1EEAFE0400C3E3D1 /* AppDelegate.m in Sources */,
+				22B5311D1EEB0C1500C3E3D1 /* TextInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "CircleView.h"
+#import "Shape.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet Shape *shapeView;
 
 @end
 
@@ -17,8 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.shapeView.fillColor = [UIColor greenColor];
 }
 
+- (IBAction)switchValueChanged:(UISwitch *)sender {
+    if (sender.on) {
+        self.shapeView.fillColor = [UIColor greenColor];
+    } else {
+        self.shapeView.fillColor = [UIColor blackColor];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SUX-Mc-mdY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,107 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEO-hH-xia">
+                                <rect key="frame" x="67" y="28" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.91767615079879761" green="0.053964145481586456" blue="0.046864069998264313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Js8-Do-hIU"/>
+                                    <constraint firstAttribute="height" constant="240" id="xKw-gl-wm9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THa-Oh-9IN" customClass="StarView">
+                                <rect key="frame" x="67" y="413" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.91767615079879761" green="0.053964145481586456" blue="0.046864069998264313" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Y04-Hg-EUz"/>
+                                    <constraint firstAttribute="height" constant="240" id="gzj-Kd-8Vr"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLi-V0-IQ9">
+                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LcW-G5-Quq"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="THa-Oh-9IN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Es8-dg-VxV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="THa-Oh-9IN" secondAttribute="bottom" constant="14" id="lL4-CF-icw"/>
+                            <constraint firstItem="BLi-V0-IQ9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nLg-iz-UWq"/>
+                            <constraint firstItem="LEO-hH-xia" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="oUZ-WK-uD5"/>
+                            <constraint firstItem="BLi-V0-IQ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ul1-RA-1Gu"/>
+                            <constraint firstItem="LEO-hH-xia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v98-Ju-3Tm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shapeView" destination="THa-Oh-9IN" id="A2r-ve-mGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Text Input View Controller-->
+        <scene sceneID="15j-SC-ENS">
+            <objects>
+                <viewController id="SUX-Mc-mdY" customClass="TextInputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gd8-Mp-7B6"/>
+                        <viewControllerLayoutGuide type="bottom" id="YrV-Dw-cci"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Epj-GX-bQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-sh-THX">
+                                <rect key="frame" x="67" y="48" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SUX-Mc-mdY" id="vdk-8y-mCS"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s6J-HG-V9O">
+                                <rect key="frame" x="67" y="109" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SUX-Mc-mdY" id="1ok-a9-5XK"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-Tj-S2F">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToReddit:" destination="SUX-Mc-mdY" eventType="touchUpInside" id="jch-zE-vHX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="d1c-Tj-S2F" firstAttribute="centerY" secondItem="Epj-GX-bQa" secondAttribute="centerY" id="4qE-Mw-XR1"/>
+                            <constraint firstItem="d1c-Tj-S2F" firstAttribute="centerX" secondItem="Epj-GX-bQa" secondAttribute="centerX" id="52L-5g-GzN"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ivg-Ce-Ata" appends="YES" id="iVd-07-mdi"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIt-mg-m21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ivg-Ce-Ata">
+                    <connections>
+                        <action selector="tapGesture:" destination="SUX-Mc-mdY" id="8TQ-rl-WIQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="653.60000000000002" y="-656.22188905547227"/>
         </scene>
     </scenes>
 </document>
